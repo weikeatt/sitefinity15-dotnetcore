@@ -2,6 +2,10 @@
 
 This guide walks you through creating a **Sitefinity CMS 15.2.8432** project using **.NET Framework 4.8** backend and **ASP.NET Core .NET 8 LTS** frontend renderer.
 
+> ⚠️ **Note:** At the time of writing, **Sitefinity 15.3 and above require .NET 9.0** for the ASP.NET Core renderer. Since **.NET 9 is an STS (Standard Term Support) release**, and **not an LTS (Long-Term Support) release**, keep this in mind when planning your project setup. 
+>  
+> It's also important to ensure that the **Sitefinity CMS version matches both the backend web app and the frontend renderer**. Version mismatches can lead to compatibility issues and unexpected behavior during development or deployment.
+
 📚 Based on: [Progress Docs - Install Sitefinity in .NET Core Mode](https://www.progress.com/documentation/sitefinity-cms/152/install-sitefinity-in-.net-core-mode-dp)
 
 ---
