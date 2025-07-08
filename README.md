@@ -52,7 +52,7 @@ Install-Package Progress.Sitefinity.Headless -IncludePrerelease [Type "A" to ove
 ## Step 2: Create the Renderer (.NET Core 8.0)
 ### 2.1 Create Project
 - In Visual Studio → **File > Add > New Project**  
-- Select **ASP.NET Core Empty**  
+- Select **ASP.NET Core Web App (Mode-View-Controller)**  
 - Configure project as:  
   - **Project name:** `SingleBuyer.Sitefinity.Renderer`  
   - **Framework:** `.NET 8.0 (Long Term Support)`  
