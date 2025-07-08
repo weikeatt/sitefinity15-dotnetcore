@@ -1,6 +1,6 @@
-# Sitefinity 15.2.8432 – .NET Framework Backend + ASP.NET Core Renderer Setup
+# Sitefinity 15.3.8522 – .NET Framework Backend + ASP.NET Core Renderer Setup
 
-This guide walks you through creating a **Sitefinity CMS 15.2.8432** project using **.NET Framework 4.8** backend and **ASP.NET Core .NET 8 LTS** frontend renderer.
+This guide walks you through creating a **Sitefinity CMS 15.3.8522** project using **.NET Framework 4.8** backend and **ASP.NET Core .NET 8 LTS** frontend renderer.
 
 > ⚠️ **Note:** At the time of writing, **Sitefinity 15.3 and above require .NET 9.0** for the ASP.NET Core renderer. Since **.NET 9 is an STS (Standard Term Support) release**, and **not an LTS (Long-Term Support) release**, keep this in mind when planning your project setup. 
 >  
@@ -17,7 +17,7 @@ This guide walks you through creating a **Sitefinity CMS 15.2.8432** project usi
 - Configure project as:  
   - **Project name:** `SingleBuyer.Sitefinity`  
   - **Solution name:** `SingleBuyer-DP`  
-  - **Framework:** `.NET Framework 4.8` (must be 4.8)  
+  - **Framework:** `.NET Framework 4.8` (must be 4.8 for LTS support)  
   - **Template:** Empty
 
 ### 1.2 Configure NuGet Source
@@ -28,11 +28,25 @@ This guide walks you through creating a **Sitefinity CMS 15.2.8432** project usi
 - In Package Manager Console, run:
 ```powershell
 Install-Package Telerik.Sitefinity.All -IncludePrerelease
-Install-Package Progress.Sitefinity.Headless -IncludePrerelease
+Install-Package Progress.Sitefinity.Headless -IncludePrerelease [Type "A" to overwrite existing packages]
 ```
+  - Accept license terms when prompted
+  - If a popup appears, select **Save As** or **Reload All**
+- **In NuGet Packages for Solution, install Telerik.Sitefinity.All in SingleBuyer.Sitefinity project**
+### 1.4 Build solution and run IIS Express as localhost
+- A browser should appear with http://localhost:44315 (Port number varies)
 
-  - Accept license terms  
-  - If a popup appears, select **Save As**  
+### 1.5 Database setup using Sitefinity Dashboard (Database should be automatically created in SSMS after these setup)
+- Set Database: Microsoft SQL Server
+  - Username: sa
+  - Password:
+  - Database: singlebuyer
+- Register Administrator
+  - Fill in relevant details
+
+### 1.6 Sitefinity Dashboard
+- Sitefinity Dashboard should appear after Sitefinity loading/upgrade screen
+
 ---
 
 ## Step 2: Create the Renderer (.NET Core 8.0)
