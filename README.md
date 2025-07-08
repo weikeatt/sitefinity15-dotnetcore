@@ -25,11 +25,14 @@ This guide walks you through creating a **Sitefinity CMS 15.2.8432** project usi
 - Make sure the source https://nuget.sitefinity.com/nuget is **installed and enabled**
 
 ### 1.3 Install Sitefinity Package
-- Right-click `SingleBuyer.Sitefinity` project → **Manage NuGet Packages**  
-- Search and install: Telerik.Sitefinity.All (version 15.2.8432)
+- In Package Manager Console, run:
+```powershell
+Install-Package Telerik.Sitefinity.All -IncludePrerelease
+Install-Package Progress.Sitefinity.Headless -IncludePrerelease
+```
+
   - Accept license terms  
-  - If a popup appears, select **Ignore**  
-- Note: `Progress.Sitefinity.Headless` package will be installed automatically  
+  - If a popup appears, select **Save As**  
 ---
 
 ## Step 2: Create the Renderer (.NET Core 8.0)
