@@ -31,7 +31,7 @@ Install-Package Telerik.Sitefinity.All -IncludePrerelease
 Install-Package Progress.Sitefinity.Headless -IncludePrerelease [Type "A" to overwrite existing packages]
 ```
   - Accept license terms when prompted
-  - If a popup appears, select **Save As** or **Reload All**
+  - If a popup appears, let the background packages/reference to load finish. Then, close the popup
 - **In NuGet Packages for Solution, install Telerik.Sitefinity.All in SingleBuyer.Sitefinity project**
 ### 1.4 Build solution and run IIS Express as localhost
 - A browser should appear with http://localhost:44315 (Port number varies)
