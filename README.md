@@ -178,6 +178,14 @@ Install-Package Progress.Sitefinity.Headless -IncludePrerelease [Type "A" to ove
  - You should get:
    - Sitefinity running on `https://localhost:44354`
    - Renderer running on `https://localhost:5001`
+
+### 4.5 API & Integration
+ - API Exposure via OData:
+   - Navigate to: Sitefinity CMS > Dashboard > Administration > Web Services > Default
+   - Configure Access: Change "Who can access content by this service" to "Everyone" for testing purposes.
+
+API Endpoint Example returns structured JSON of news content: **/api/default/newsitems**
+
 ---
 
 ## 5. Notes
